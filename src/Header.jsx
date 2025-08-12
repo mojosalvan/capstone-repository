@@ -1,10 +1,11 @@
-import Navigation from './Navigation';
-
-export default function Header({ navLinks }) {
+export default function Header() {
   return (
-    <header className="header">
-      <img src="/assets/logo.svg" alt="little-lemon-logo" />
-      <Navigation navLinks={navLinks}/>
-    </header>
+    <div className="flex items-center py-4 px-6 bg-gray-800">
+      <img
+        src="/assets/logo.svg"
+        alt="Little Lemon Logo"
+        className="h-12 w-auto"
+      />
+    </div>
   );
 }
