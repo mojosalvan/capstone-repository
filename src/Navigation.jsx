@@ -1,18 +1,13 @@
 import { Link } from 'react-router-dom';
 import navLinks from './NavList';
 
-export default function Navigation() {
+export default function Navigation({className}) {
   return (
-    <nav>
-      <ul className="flex gap-6">
+    <nav aria-label="Main navigation">
+      <ul className={className}>
         {navLinks.map(({ path, name }) => (
           <li key={path}>
-            <Link
-              to={path}
-              className="text-white hover:text-yellow-400 transition-colors duration-200"
-            >
-              {name}
-            </Link>
+            <Link to={path} className={name === "Order Online" ? "whitespace-nowrap" : ""}>{name}</Link>
           </li>
         ))}
       </ul>
