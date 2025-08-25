@@ -10,8 +10,8 @@ export default function Socials() {
         <ul className="flex gap-3 mt-5">
           {socials.map((social) =>
             <li key={social.name}>
-              <a href={social.href}>
-                <img src={social.icon} alt={social.name} className="h-6 w-auto"/>
+              <a href={social.href} className="flex">
+                <img src={social.icon} alt={social.name} className="h-6 w-6 flex-shrink-0"/>
               </a>
             </li>
           )}
